@@ -36,5 +36,22 @@
 
     [[= DynamicImage.GenerateCountDownImage(CountDownOptions, CountDownClassNames, CountDownInlineStyles); ]]
 
+]]<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"[[ VisualEditor.EditZone(block_Content, blockset_Content_GlobalDesignConfig); ]]>
+<tr>
+<td align="center">
+<table align="center" width="[[=ContentWidth;]]%" [[if(bgColor != ""){]]bgcolor="[[=bgColor;]]" [[}]] [[if(bgColor != ""){]]style="background:[[=bgColor;]];"[[}]] cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="padding:[[=PaddingTop;]]px [[=PaddingRight;]]px [[=PaddingBottom;]]px [[=PaddingLeft;]]px;">
+    [[if (VisualEditor.IsDesignMode()) { ]]
+    [[=DynamicImage.GenerateCountDownImage(CountDownOptions, CountDownClassNames, CountDownInlineStyles);]]
+    [[}
+    else{
+        output.write("[[= DynamicImage.GenerateCountDownImage(CountDownOptions, CountDownClassNames, CountDownInlineStyles); ]]");
+    }]]
+</td>
+</tr>
+</table>
+
+
     ```
    
